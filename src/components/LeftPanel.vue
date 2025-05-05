@@ -38,12 +38,12 @@
   import LineChart from './charts/LineChart.vue';
   
   const overviewCards = [
-    { title: "总建成项目", value: "2个", icon: "@/assets/folder.png" },
-    { title: "高效节水规模", value: "600亩", icon: "@/assets/water.png" },
-    { title: "新增建成项目", value: "2个", icon: "@/assets/new.png" },
-    { title: "智慧农业面积", value: "600亩", icon: "@/assets/plant.png" },
-    { title: "建成总规模", value: "2.06万亩", icon: "@/assets/rate.png" },
-    { title: "新增粮食产量", value: "950吨/年", icon: "@/assets/grain.png" },
+    { title: "总建成项目", value: "2个", icon: "/src/assets/folder.png" },
+    { title: "高效节水规模", value: "600亩", icon: "/src/assets/water.png" },
+    { title: "新增建成项目", value: "2个", icon: "/src/assets/new.png" },
+    { title: "智慧农业面积", value: "600亩", icon: "/src/assets/plant.png" },
+    { title: "建成总规模", value: "2.06万亩", icon: "/src/assets/rate.png" },
+    { title: "新增粮食产量", value: "950吨/年", icon: "/src/assets/grain.png" },
   ];
   
   const pieChartData = {
@@ -70,28 +70,29 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .left-panel {
-    width: 200px;  /* 固定面板宽度 */
+    width: 200px;
     height: 100%;
+    background-color: rgba(0, 20, 50, 0.7);
     padding: 10px;
     overflow-y: auto;
-    background: rgba(0, 20, 50, 0.7);
     position: absolute;
-    top: 0;
-    z-index: 5; /* 确保面板在地图上层 */
+    left: 0;
+    top: 80px; /* 头部高度 */
+    z-index: 5;
   }
   
   .panel-section {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   h3 {
     font-size: 16px;
     margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgba(0, 150, 255, 0.3);
     color: #fff;
+    border-bottom: 1px solid rgba(0, 150, 255, 0.3);
+    padding-bottom: 5px;
   }
   
   .built-overview-cards {
@@ -101,12 +102,10 @@
   }
   
   .overview-card {
-    background: rgba(0, 30, 80, 0.5);
+    background-color: rgba(0, 30, 80, 0.5);
     border: 1px solid rgba(0, 100, 255, 0.3);
     border-radius: 5px;
     padding: 10px;
-    display: flex;
-    align-items: center;
   }
   
   .card-content {
@@ -139,11 +138,11 @@
   }
   
   .chart-container {
+    width: 100%;
     height: 150px;
-    background: rgba(0, 30, 80, 0.5);
+    background-color: rgba(0, 30, 80, 0.5);
     border: 1px solid rgba(0, 100, 255, 0.3);
     border-radius: 5px;
     padding: 10px;
   }
   </style>
-  

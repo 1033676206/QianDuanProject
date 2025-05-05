@@ -10,7 +10,7 @@
   <script setup>
   </script>
   
-  <style>
+  <style scoped>
   .footer {
     background: rgba(0, 30, 80, 0.8);
     color: white;
@@ -19,11 +19,5 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    z-index: 10; /* 确保底部在最上层 */
-  }
-  
-  .footer-content {
-    font-size: 14px;
   }
   </style>
-  

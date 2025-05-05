@@ -34,40 +34,9 @@
   });
   </script>
   
-  <style>
-  .map-section {
-    flex-grow: 1;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0; /* 确保地图在底层 */
-  }
-  
-  .main-map {
+  <style scoped>
+  .map-section, .main-map {
     width: 100%;
     height: 100%;
   }
-  
-  .map-popup {
-    background: rgba(0, 30, 80, 0.8);
-    border: 1px solid rgba(0, 100, 255, 0.5);
-    color: white;
-    border-radius: 5px;
-    padding: 15px;
-    width: 220px;
-  }
-  
-  .map-popup h4 {
-    margin-top: 0;
-    color: #00c6ff;
-  }
-  
-  .map-popup p {
-    margin: 5px 0;
-    font-size: 14px;
-  }
   </style>
-  

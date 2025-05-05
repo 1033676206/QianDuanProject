@@ -29,8 +29,8 @@
   
   <script setup>
   const farms = [
-    { name: '随县田丰农业种植有限公司-1', block: '新安街道片', period: '2022/04/20—2052/04/20' },
-    { name: '随县田丰农业种植有限公司-2', block: '新安街道片', period: '2022/04/20—2052/04/20' },
+    { name: '随县田丰农业种植有限公司-1', block: '新安街道片-1', period: '2022/04/20—2052/04/20' },
+    { name: '随县田丰农业种植有限公司-2', block: '新安街道片-2', period: '2022/04/20—2052/04/20' },
   ];
   
   const enterprises = [
@@ -39,41 +39,37 @@
   ];
   </script>
   
-  <style>
+  <style scoped>
   .right-panel {
-    width: 200px;  /* 固定面板宽度 */
+    width: 200px;
     height: 100%;
+    background-color: rgba(0, 20, 50, 0.7);
     padding: 10px;
     overflow-y: auto;
-    background: rgba(0, 20, 50, 0.7);
     position: absolute;
-    top: 0;
-    z-index: 5; /* 确保面板在地图上层 */
+    right: 0;
+    top: 80px; /* 头部高度 */
+    z-index: 5;
   }
   
   .panel-section {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   h3 {
     font-size: 16px;
     margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgba(0, 150, 255, 0.3);
     color: #fff;
-  }
-  
-  .farm-list, .enterprise-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    border-bottom: 1px solid rgba(0, 150, 255, 0.3);
+    padding-bottom: 5px;
   }
   
   .farm-item, .enterprise-item {
-    background: rgba(0, 30, 80, 0.5);
+    background-color: rgba(0, 30, 80, 0.5);
     border: 1px solid rgba(0, 100, 255, 0.3);
     border-radius: 5px;
     padding: 10px;
+    margin-bottom: 10px;
   }
   
   .farm-info h4, .enterprise-info h4 {
@@ -86,4 +82,3 @@
     font-size: 14px;
   }
   </style>
-  
